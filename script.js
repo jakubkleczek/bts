@@ -2,9 +2,35 @@
 // 10-Functions
 
 ///////////////////////////////////////
+// Immediately Invoked Function Expressions (IIFE)
+
+const runOnce = function () {
+    console.log('This will never run again');
+};
+runOnce();
+
+// IIFE
+(function () {
+    console.log('This will never run again');
+    const isPrivate = 23;
+})();
+
+// console.log(isPrivate );
+
+(() => console.log('This will never run again'))();
+
+{
+    const isPrivate = 23;
+    var notPrivate = 46;
+}
+
+// console.log(isPrivate);
+console.log(notPrivate);
+
+/*
+///////////////////////////////////////
 // Coding Challenge #1
 
-/* 
 Let's build a simple poll app!
 A poll has a question, an array of options from which people can choose, and an array with the number of replies for each option. This data is stored in the starter object below.
 Here are your tasks:
@@ -26,7 +52,7 @@ BONUS: Use the 'displayResults' method to display the 2 arrays in the test data.
 BONUS TEST DATA 1: [5, 2, 3]
 BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 GOOD LUCK 😀
-*/
+
 
 const poll = {
     question: 'What is your favourite programming language?',
@@ -65,7 +91,7 @@ document
 poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
-
+*/
 /*
 /////////////////////////////////////////////////////
 // The call and apply Methods
