@@ -2,6 +2,21 @@
 // 10-Functions
 
 ///////////////////////////////////////
+// Closures
+
+const secureBooking = function () {
+    let passangerCount = 0;
+
+    return function () {
+        passangerCount++;
+        console.log(`${passangerCount} passengers`);
+    };
+};
+
+const booker = secureBooking();
+
+/*
+///////////////////////////////////////
 // Immediately Invoked Function Expressions (IIFE)
 
 const runOnce = function () {
@@ -26,7 +41,7 @@ runOnce();
 
 // console.log(isPrivate);
 console.log(notPrivate);
-
+*/
 /*
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -1334,7 +1349,6 @@ var addArrow = (a, b) => {
 };
 addArrow(2, 5, 8, 12);
 */
-
 /*
 let age = 30;
 let oldAge = age;
